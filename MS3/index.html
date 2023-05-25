@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+
+
     <head>
         <!-- FAYM STANDS FOR FARAH-AHMED-YOUSSEF-MIRNA -->
         <title>
@@ -7,7 +9,49 @@
         </title>
         <link rel ="stylesheet" href="css/styles.css">
     </head>
+   
+   
+
     <body>
 
+        <nav class="nav">
+         <ul>
+            <li>  <a href="index.html" >HOME</a></li>
+             <li> <a href="/loginForm" >LOG IN</a></li>
+             <li> <a href="/signUpForm" >SIGN UP</a></li>
+             <li> <a href="products" >PRODUCT</a></li>
+             <li> <a href="vision" >VISION</a> </li>
+             <li> <a href="supportUs" >SUPPORT US</a></li>
+         </ul>
+        </nav>
+
+
+
+        <section>
+            <img class="mainPageSlides" src="img/image1.png"  alt="bank" >
+            <img class="mainPageSlides" src="img/image2.jpeg" alt="bank">
+            <img class="mainPageSlides" src="img/image3.jpg"  alt="bank">
+        </section>
+<script>
+        var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mainPageSlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000)
+};
+</script>
+
     </body>
+
+
+
+
 </html>
