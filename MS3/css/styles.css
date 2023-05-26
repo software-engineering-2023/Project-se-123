@@ -14,12 +14,14 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #293aac;
+    background-color: var(--blue);
   }
 
 nav li{
     border-right: 1px solid #bbb;
     float: left;
+   
+    
 }
 nav li :last-child{
     border-right: none;
@@ -42,3 +44,17 @@ img.mainPageSlides{
     height: 70%;
 }
 
+
+body{
+  background-color: var(--purple);
+}
+
+:root{
+  --primary-color:#18206F;
+  --seondary-color:#D4AF37;
+  --green:#A4B494;
+  --purple:#6C6061;
+  --blue:#383F51;
+
+
+}
