@@ -12,6 +12,9 @@
   --blue:#383F51;
   --light-grey:#CBCBC4;
   --beige:#fff5d6;
+  --stolen1:#f9f9f2;
+  --stolen2:#1e3151;
+  --stolen3:#453542;
 
 
 }
@@ -20,4 +23,8 @@ a{
 }
 body{
   padding-top: 47px;
+}
+
+html, body{
+  height: 100%;
 }

@@ -1,6 +1,7 @@
 
 header{
   position: fixed;
+ 
 }
 nav ul {
     position: fixed;
@@ -13,7 +14,8 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: var(--blue);
+    background-color: var(--stolen2);
+    z-index: 100;
   }
 
 nav li{
@@ -45,7 +47,7 @@ img.mainPageSlides{
 
 
 body{
-  background-color: var(--beige);
+  background-color: var(--stolen1);
   padding-bottom: 500px;
 }
 
@@ -74,7 +76,7 @@ footer
 }
 footer button{
 
-  background-color: var(--green);
+  background-color: var(--stolen3);
   color:white;
   border: none;
   height: 36px;
