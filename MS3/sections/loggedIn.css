@@ -115,38 +115,52 @@
 }
 
 .welcome{
-    background-color:aqua;
+    background-color:var(--stolen3);
     position: relative;
     width: 40%;
     height: 300px;;
     margin-left: 32%;
     top: 100px;
-   
-
+    font-size: 200%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
    
 
 }
+
 .section1{
-    background-color:aquamarine;
+    background-color:var(--stolen-grey);
     position: relative;
     width: 40%;
     height: 300px;;
     margin-left: 32%;
     margin-top: 12%;
     top: 100px;
+    font-size: 200%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
    
 
    
 
 }
 .section2{
-    background-color:blueviolet;
+    background-color:var(--stolen-green);
     position: relative;
     width: 40%;
     height: 300px;;
     margin-left: 32%;
     margin-top: 12%;
     top: 100px;
+    font-size: 200%;
+    text-align: center;
+     display: flex;
+    align-items: center;
+    justify-content: center;
    
 
    
