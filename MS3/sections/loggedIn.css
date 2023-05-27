@@ -62,3 +62,37 @@
     text-align: center;
   
   }  
+
+.nav-right{
+    display: flex;
+    float: right;
+    position: fixed;
+    /* justify-content: center; */
+    align-items: flex-end;
+    width: 150px;
+    margin-top: -52px;
+    margin-left: 90%;  
+    background-color:aqua;
+  
+}
+
+.nav-right div{
+    position: relative;
+}
+
+.nav-right div img{
+    width: 30%;
+    height: 50%;
+    display: flex;
+   
+}
+.nav-right div .text{
+    /* position: absolute; */
+    /* align-items: center; */
+    /* background-color:cadetblue; */
+    margin-top: 0px;
+    top: 0;
+
+    
+   
+}
