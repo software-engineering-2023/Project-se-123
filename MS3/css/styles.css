@@ -1,53 +1,8 @@
 
 @import url("../sections/forms.css");
+@import url("../sections/homePage.css");
+@import url("../sections/loggedIn.css");
 
-
-
-nav ul {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: var(--blue);
-  }
-
-nav li{
-    border-right: 1px solid #bbb;
-    float: left;
-   
-    
-}
-nav li :last-child{
-    border-right: none;
-}
-nav li a{
-    display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none
-}
-li a:hover {
-    background-color: #303870;
-  }
-img.mainPageSlides{
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    height: 70%;
-}
-
-
-body{
-  background-color: var(--purple);
-}
 
 :root{
   --primary-color:#18206F;
@@ -55,6 +10,9 @@ body{
   --green:#A4B494;
   --purple:#6C6061;
   --blue:#383F51;
+  --light-grey:#CBCBC4;
+  --beige:#fff5d6;
 
 
 }
+
