@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Credit Card Loss Report</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .report-form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .report-form label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #07ad90;
+    }
+
+    .report-form select,
+    .report-form input[type="text"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+
+    .report-form input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .report-form input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1  style="color: #07ad90;">Credit Card Loss Report</h1>
+
+  <div class="report-form">
+    <h2 style="color: #07ad90;">Fill the form</h2>
+    <form>
+      <label for="reason" style="color: #07ad90;">What is the reason?</label>
+      <select id="reason" name="reason" required>
+        <option value="" disabled selected>Select a reason</option>
+        <option value="stolen">My Credit Card is Stolen</option>
+        <option value="damaged">My Credit Card is Damaged</option>
+        <option value="lost">My Credit Card is Lost</option>
+      </select>
+
+      <label for="credit-card-number" style="color: #07ad90;">Credit Card Number:</label>
+      <input type="text" id="credit-card-number" name="credit-card-number" required>
+
+      <label for="new-card" style="color: #07ad90;">Want to apply for a new one?</label>
+      <select id="new-card" name="new-card" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <input  style="background-color: #07ad90;" type="submit" value="Submit">
+    </form>
+  </div>
+
+</body>
+</html>

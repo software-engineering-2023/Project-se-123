@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Transfer Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .transfer-form {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        font-weight: bold;
+      }
+
+      .form-group input[type="text"],
+      .form-group input[type="number"],
+      .form-group select {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .transfer-button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+    <script>
+      function handleTransferType() {
+        var transferType = document.getElementById("transfer-type").value;
+        var accountNumber = document.getElementById("account-number");
+        var iban = document.getElementById("iban");
+        var swiftCode = document.getElementById("swift-code");
+
+        accountNumber.classList.add("hidden");
+        iban.classList.add("hidden");
+        swiftCode.classList.add("hidden");
+
+        if (transferType === "local") {
+          accountNumber.classList.remove("hidden");
+        } else if (transferType === "domestic") {
+          accountNumber.classList.remove("hidden");
+          iban.classList.remove("hidden");
+        } else if (transferType === "international") {
+          swiftCode.classList.remove("hidden");
+          accountNumber.classList.remove("hidden");
+          iban.classList.remove("hidden");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="transfer-form" style="margin-top: 15%;">
+      <h2 style="color:#07ad90 ;">Transfer Details</h2>
+      <form>
+        <div class="form-group">
+          <label for="transfer-type" style="color:#07ad90 ;">Transfer Type:</label>
+          <select
+            id="transfer-type"
+            name="transfer-type"
+            onchange="handleTransferType()"
+          >
+            <option value="local">Local Transfer</option>
+            <option value="domestic">Domestic Transfer</option>
+            <option value="international">International Transfer</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="amount" style="color:#07ad90 ;">Amount:</label>
+          <input type="number" id="amount" name="amount" required />
+        </div>
+
+        <div class="form-group">
+          <label for="account-number" style="color:#07ad90 ;">Account Number:</label>
+          <input
+            type="text"
+            id="account-number"
+            name="account-number"
+            required
+          />
+        </div>
+
+        <div class="form-group hidden" id="iban">
+          <label for="iban" style="color:#07ad90 ;">IBAN:</label>
+          <input type="text" id="iban" name="iban" />
+        </div>
+
+        <div class="form-group hidden" id="swift-code">
+          <label for="swift-code" style="color:#07ad90 ;">Swift Code:</label>
+          <input type="text" id="swift-code" name="swift-code" />
+        </div>
+
+        <div class="form-group">
+          <label for="signature" style="color:#07ad90 ;">Your Name (Signature):</label>
+          <input type="text" id="signature" name="signature" required />
+        </div>
+
+        <button style="background-color:#07ad90 ;"  class="transfer-button" type="submit">Transfer</button>
+      </form>
+    </div>
+  </body>
+</html>

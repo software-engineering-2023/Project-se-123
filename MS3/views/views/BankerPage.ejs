@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/6fdaf88a4a.js" crossorigin="anonymous"></script>
+    <style> @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+header{
+    background: #07ad90;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+.logo{
+    text-decoration: none;
+    color:#fbfffe ;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navigation a{
+    text-decoration: none;
+    color:#ffffff;
+    font-size: 1.8em;
+    font-weight: 500;
+    padding-left: 30px;
+    transition: 1.5s ease;
+}
+.navigation a:hover{
+    font-size: 2.2em;
+}
+.navigation a:hover{
+    color: #07ad90;
+}
+section{
+    padding: 100px 200px;
+}
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    /* alighn items can't be done before display flex */
+    align-items: center;
+    background: rgb(255, 255, 255);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.main h2{
+    color: #07ad90;
+    font-size: 1.4em;
+    font-weight: 500;
+
+
+}
+.main h2 span{
+    display: inline-block;
+    margin-top: 10px;
+    color: #07ad90;
+    font-size: 3em;
+    font-weight: 600;
+}
+.main h3{
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.main h4 span{
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 3em;
+    font-weight: 600;
+}
+.main-btn{
+    text-decoration: none;
+    color: #fff;
+    background: #07ad90;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+
+} 
+.main-btn:hover{
+    background-color: #07ad90;
+    transform: scale(1.1);
+}
+.social-icons a{
+    color: white;
+    font-size: 1.7em;
+    padding-right: 30px;
+    transition: 0.7s ease;
+}
+.social-icons a:hover{
+    font-size: 2.2em;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    color: #07ad90;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.title1{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card{
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px #07ad90; 
+   border-radius: 10px;
+   padding: 25px;
+   margin: 15px;
+   transition: .7s ease;
+}
+.card:hover{
+    transform: scale(1.1);
+
+}
+.icon{
+    color: #07ad90;
+    font-size: 8em;
+    text-align: center;
+}
+.info{
+    text-align: center;
+}
+.info h3{
+    color: #07ad90;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+    
+}
+.projects{
+    background-color:#07ad90;
+}
+.projects  .content{
+    margin-top: 30px;
+}
+.project-card{
+    background: white;
+    border: 1px solid white;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: .7s ease;
+}
+.project-card:hover{
+    transform: scale(1.1);
+}
+.project-img img{
+    width: 100%;
+
+
+}
+.project-card:hover .project-img{
+    opacity: .9;
+}
+.project-info{
+    padding: 1em;
+}
+.project-category{
+    font-size: 0.8em;
+    color: #07ad90;
+}
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+.more-details{
+    text-decoration: none;
+    color: #07ad90;
+}
+.more-details:hover{
+    color: #07ad90;
+}
+.contact .icon {
+    font-size: 4.5em;
+}
+.contact .info h3{
+    color: black;
+
+}
+.contact .info p{
+    font-size: 1.2em;
+}
+.footer{
+    background-color: #ffffff;
+    color: white;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-title{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.footer-title span{
+    color: #07ad90;
+}
+.footer .social-icons a{
+    
+    padding: 0 12px 0 0;
+
+}
+@media (max-width:1023px){
+    header{
+        padding: 10px 10px;
+    }
+   .navigation a{
+       padding-left: 5px;
+       font-size: 1.4em;
+       font-weight: 400;
+       
+
+   }
+.title{
+    font-size: 1.8em;
+}
+section{
+    padding: 80px 20px;
+}
+.main-content h2{
+    font-size: 1em;
+}
+.main-content h3{
+    font-size: 1.6em;
+
+}
+.content{
+    flex-direction: column;
+    align-items: center;
+}
+@media (max-width:641px)
+{
+    body{
+        font-size: 12px;
+    }
+    .main-content h2{
+        font-size: .8em;
+        
+    }
+    .main-content h3{
+        font-size: 1.4em;
+    }
+}
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+    }
+}
+
+} </style>
+    <title>DeepEnd </title>
+</head>
+  <body>
+    <header>
+      <a href="/BankerPage" class="logo">FMI BANKING SYSTEM </a>
+      <nav class="navigation">
+        <a href="#services">Accounts</a>
+        <a href="#projects"> Cards</a>
+        <a href="#Report">Report</a>
+          <a href="/login">
+<i style="width: 50px; height: 50px; color: #000016;" class="fa-solid fa-right-from-bracket "></i>
+        </a>
+      </nav>
+    </header>
+
+    <section class="main">
+      <div>
+        <h2>
+       <br />
+          <span>Banker </span>
+        </h2>
+        <div class="cont">
+       
+              </div>
+ 
+      </div>
+    </section>
+    <section class="cards" id="services">
+      <h2 class="title">Account</h2>
+      <div class="content">
+        <div class="card">
+          <a  style= "text-decoration: none;" href="/AccountsRequests"><div class="info">
+            <h3>Accounts open Requests</h3>
+          
+            <p></p>
+          </div></a>
+        </div>
+
+   
+        <div class="card">
+          <div class="info">
+            <a  style= "text-decoration: none;" href="/LoansRequests">
+            <h3>Loans</h3>
+            </a>
+          </div>
+        </div>
+       
+      </div>
+    </section>
+    <section class="projects" id="projects">
+      <h2 class="title1">Credit Cards</h4>
+      <div class="content">
+        <div class="content">
+          <div class="card">
+            <div class="info">
+              <a  style= "text-decoration: none;" href="/CreditCardApp">
+              <h3>Applications</h3>
+              </a>
+              <p></p>
+            </div>
+          </div>
+  
+     
+       
+        
+     
+         
+      </div>
+    </section>
+
+        <section class="cards contact" id="Report" style="background-color: #fff;" >
+      <h2 class="title">Report</h2>
+      <div class="content">
+        <div class="card">
+          <div class="icon"><i class="fa-regular fa-credit-card"></i></div>
+          <div class="info">
+                   <a href="/CreditCardRep" style="text-decoration: none;">
+
+      <h3 style="color: #07ad90;">Credit Card</h3>
+            </a>
+          
+          </div>
+        </div>
+   
+      </div>
+    </section>
+  <footer class="footer">
+      <p class="footer-title">copyrights &copy; <span> DEEP END </span></p>
+    
+    </footer>
+  </body>
+</html>

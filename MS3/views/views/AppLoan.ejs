@@ -1,0 +1,483 @@
+<!-- login.ejs -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open Account</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/6fdaf88a4a.js" crossorigin="anonymous"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      * {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+      header {
+        background: #07ad90;
+        width: 100%;
+        
+        z-index: 999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 200px;
+      }
+      .logo {
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.8em;
+      }
+
+      .navigation a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.8em;
+        font-weight: 500;
+        padding-left: 30px;
+        transition: 1.5s ease;
+      }
+      .navigation a:hover {
+        font-size: 2.2em;
+      }
+      .navigation a:hover {
+        color: #07ad90;
+      }
+      section {
+        padding: 100px 200px;
+      }
+      .main {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        /* alighn items can't be done before display flex */
+        align-items: center;
+      
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        justify-content: center;
+      }
+      .main h2 {
+        color: white;
+        font-size: 1.4em;
+        font-weight: 500;
+      }
+      .main h2 span {
+        display: inline-block;
+        margin-top: 10px;
+        color: #fff;
+        font-size: 3em;
+        font-weight: 600;
+      }
+      .main h3 {
+        color: white;
+        font-size: 2em;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      .main-btn {
+        text-decoration: none;
+        color: #fff;
+        background: #07ad90;
+        font-size: 1.1em;
+        font-weight: 600;
+        display: inline-block;
+        padding: 0.9375em 2.1875em;
+        letter-spacing: 1px;
+        border-radius: 15px;
+        margin-bottom: 40px;
+        transition: 0.7s ease;
+      }
+      .main-btn:hover {
+        background-color: #07ad90;
+        transform: scale(1.1);
+      }
+      .social-icons a {
+        color: white;
+        font-size: 1.7em;
+        padding-right: 30px;
+        transition: 0.7s ease;
+      }
+      .social-icons a:hover {
+        font-size: 2.2em;
+      }
+      .title {
+        display: flex;
+        justify-content: center;
+        color: #07ad90;
+        font-size: 2.2em;
+        font-weight: 800;
+        margin-bottom: 30px;
+      }
+      .content {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .main h1 {
+        color: #fff;
+        margin-right: 10px;
+      }
+
+      .card {
+        background-color: #fff;
+        width: 21.25em;
+        box-shadow: 0 5px 25px rgba(1, 1, 1, 0.15);
+        border-radius: 10px;
+        padding: 25px;
+        margin: 15px;
+        transition: 0.7s ease;
+      }
+      .card:hover {
+        transform: scale(1.1);
+      }
+      .icon {
+        color: #3a6cf4;
+        font-size: 8em;
+        text-align: center;
+      }
+      .info {
+        text-align: center;
+      }
+      .info h3 {
+        color: #07ad90;
+        font-size: 1.2em;
+        font-weight: 700;
+        margin: 10px;
+      }
+      .projects {
+        background-color: #000016;
+      }
+      .projects .content {
+        margin-top: 30px;
+      }
+      .project-card {
+        background: white;
+        border: 1px solid white;
+        min-height: 14em;
+        width: 23em;
+        overflow: hidden;
+        border-radius: 10px;
+        margin: 20px;
+        transition: 0.7s ease;
+      }
+      .project-card:hover {
+        transform: scale(1.1);
+      }
+      .project-img img {
+        width: 100%;
+      }
+      .userpass {
+        display: flex;
+        flex-direction: row;
+      }
+      .project-card:hover .project-img {
+        opacity: 0.9;
+      }
+      .project-info {
+        padding: 1em;
+      }
+      .project-category {
+        font-size: 0.8em;
+        color: black;
+      }
+      .project-title {
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-top: 10px;
+      }
+      .more-details {
+        text-decoration: none;
+        color: #07ad90;
+      }
+      .more-details:hover {
+        color: #07ad90;
+      }
+      .contact .icon {
+        font-size: 4.5em;
+      }
+      .contact .info h3 {
+        color: black;
+      }
+      .contact .info p {
+        font-size: 1.2em;
+      }
+      .footer {
+        background-color: #07ad90;
+        color: white;
+        padding: 2em;
+        display: flex;
+        justify-content: space-between;
+      }
+      .footer-title {
+        font-size: 1.3em;
+        font-weight: 600;
+      }
+      .footer-title span {
+        color: #07ad90;
+      }
+      .footer .social-icons a {
+        padding: 0 12px 0 0;
+      }
+      input {
+        width: 200px;
+        padding: 10px;
+        border-color: #07ad90;
+
+        border-radius: 10px;
+      }
+      @media (max-width: 1023px) {
+        header {
+          padding: 10px 10px;
+        }
+        .navigation a {
+          padding-left: 5px;
+          font-size: 1.4em;
+          font-weight: 400;
+        }
+        .title {
+          font-size: 1.8em;
+        }
+        section {
+          padding: 80px 20px;
+        }
+        .main-content h2 {
+          font-size: 1em;
+        }
+        .main-content h3 {
+          font-size: 1.6em;
+        }
+        .content {
+          flex-direction: column;
+          align-items: center;
+        }
+        @media (max-width: 641px) {
+          body {
+            font-size: 12px;
+          }
+          .main-content h2 {
+            font-size: 0.8em;
+          }
+          .main-content h3 {
+            font-size: 1.4em;
+          }
+        }
+        @media (max-width: 300px) {
+          body {
+            font-size: 10px;
+          }
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a href="/home" class="logo">Online Bank  </a>
+      <nav class="navigation">
+        <a href="#services">Apply for a Loan</a>
+          <a href="/login">
+<i style="width: 50px; height: 50px; color: #000016;" class="fa-solid fa-right-from-bracket "></i>
+        </a>
+      </nav>
+    </header>
+    <div style="display: flex; flex-direction: row;">
+
+         <div style="margin-left: -150px ;   justify-content: center; width: 40%;  background-color: #07ad90;" class="card">
+          <div class="info">
+               <section class="main">
+      <form method="POST" action="/OpenAccount">
+     
+        
+
+        <br />
+        <div class="userpass">
+          <h1 style="width: 200px">Bank ACC ID: </h1>
+          <input
+            type="id"
+            name="id"
+            placeholder=" id"
+            required
+          />
+        </div>
+
+        <br />
+        <div class="userpass">
+            <h1 style="width: 200px"> type :</h1>
+            <input
+              type="phone"
+              name="phone"
+              placeholder=" phone"
+              required
+            />
+          </div>
+          <br />
+
+          <div class="userpass">
+            <h1 style="width: 200px"> Amount:</h1>
+            <input
+              type="address"
+              name="address"
+              placeholder=" address"
+              required
+            />
+          </div>
+          <br />
+
+          <div class="userpass">
+            <h1 style="width: 200px"> reason:</h1>
+            <input
+              type="email"
+              name="email"
+              placeholder=" email"
+              required
+            />
+          </div>
+
+          <br />
+
+          <div class="userpass">
+            <h1 style="width: 200px">Type:</h1>
+            <input
+              type="type"
+              name="type"
+              placeholder="Personal / Car"
+              required
+            />
+          </div>
+          <br />
+
+          <form action="/upload" method="post" enctype="multipart/form-data">
+    <label for="fileInput">certificate of employment</label>
+    <input type="file" id="fileInput" name="fileInput">
+    
+  </form>
+
+        <div
+          style="
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            justify-content: center;
+          "
+        >
+
+          <button
+            id="openaccount"
+            style="
+              width: 180px;
+              height: 50px;
+              color: #07ad90; /* Change the text color to white */
+              font-size: 22px;
+              font-weight: 600; /* Adjust the text size to 18 pixels */
+              font-family: Arial;
+              border: 0;
+              border-radius: 20px;
+              background-color: #fff;
+             
+            "
+            type="submit"
+          >
+            Apply
+          </button>
+        </div>
+    
+      </form>
+    
+    </section>
+
+
+            
+          </div>
+
+        </div>
+
+        <div>
+          <p style="margin: 15px; font-size: larger;">
+      Personal Loans:
+
+Purpose: Personal loans are unsecured loans that can be used for any personal expenses or financial needs.
+Features and Benefits: Personal loans typically have a fixed interest rate and a fixed repayment period. They can be used for debt consolidation, home improvements, medical expenses, vacations, or other personal purposes.
+Reason: Personal loans are suitable for individuals who need funds for personal expenses but may not have collateral to secure the loan.
+
+
+      </p>
+      <br>
+
+     <p style="margin: 15px; font-size: larger;">
+Mortgage Loans:
+
+Purpose: Mortgage loans, also known as home loans, are used to finance the purchase of a property or real estate.
+Features and Benefits: Mortgage loans have longer repayment periods (usually 15 to 30 years) and may have fixed or adjustable interest rates. The property being purchased acts as collateral for the loan.
+Reason: Mortgage loans are suitable for individuals or families looking to buy a home or invest in real estate.
+      </p>
+<br>
+    <p style="margin: 15px; font-size: larger;">
+
+Auto Loans:
+
+Purpose: Auto loans are specifically designed to finance the purchase of a vehicle, such as a car, motorcycle, or truck.
+Features and Benefits: Auto loans have fixed interest rates and repayment terms. The vehicle being purchased serves as collateral for the loan, and the ownership transfers to the borrower upon full repayment.
+Reason: Auto loans are ideal for individuals who want to purchase a vehicle but may not have the full amount upfront.
+
+      </p>
+      <br>
+      <p  style="margin: 15px; font-size: larger;">
+Student Loans:
+
+Purpose: Student loans are intended to help students finance their education expenses, including tuition fees, books, and living costs.
+Features and Benefits: Student loans may have flexible repayment options, including deferred payment until after graduation. Interest rates can be fixed or variable, depending on the loan type and terms.
+Reason: Student loans are suitable for students pursuing higher education who need financial assistance to cover the costs of their studies.
+      </p>
+<br>
+
+           <p  style="margin: 15px; font-size: larger;">
+        Business Loans:
+
+Purpose: Business loans are provided to entrepreneurs and businesses to support their operations, expansion, or specific business needs.
+Features and Benefits: Business loans can be secured or unsecured, depending on the loan amount and terms. They can help businesses manage cash flow, purchase equipment, finance inventory, or fund growth initiatives.
+Reason: Business loans are suitable for small businesses, startups, or established companies that require additional capital for their operations or growth plans.
+</p>
+
+        </div>
+
+
+    </div>
+            
+
+            
+
+    <footer class="footer">
+        <div >
+        <h1 style="color: #fff; ">
+  <a href="" style="text-decoration-line: none; color: #fff;">contact us</a>
+        </h1>
+
+        <div style="display: flex; flex-direction: row;">
+ <i class="fa-solid fa-phone fa-lg" style="margin-top: 10px; margin-right: 10px;"></i>
+ <br>
+ <p> Hotline : 12376</p>
+        </div>
+      
+
+        </div>
+
+      
+
+
+    
+    </footer>
+  </body>
+</html>

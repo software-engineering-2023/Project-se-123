@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bills Reminder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .reminder-form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .reminder-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .reminder-form input[type="text"],
+    .reminder-form input[type="date"],
+    .reminder-form input[type="time"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+
+    .reminder-form select {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+
+    .reminder-form input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .reminder-form input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .reminder-list {
+      margin-top: 20px;
+    }
+
+    .reminder-item {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="color: #07ad90;">Bills Reminder</h1>
+
+  <div class="reminder-form">
+    <h2  style="color: #07ad90;">Add a Reminder</h2>
+    <form onsubmit="addReminder(event)">
+      <label style="color: #07ad90;" for="bill-name">Bill Name:</label>
+      <select id="bill-name" name="bill-name" required>
+        <option value="" disabled selected>Select a bill</option>
+        <option value="gas">Gas Bill</option>
+        <option value="electricity">Electricity Bill</option>
+        <option value="water">Water Bill</option>
+        <option value="phone">Phone Bill</option>
+           <option value="credit">Credit Card Bill</option>
+           <option value="loan">loan installment</option>
+      </select>
+
+      <label style="color: #07ad90;" for="due-date">Due Date:</label>
+      <input type="date" id="due-date" name="due-date" required>
+
+      <label style="color: #07ad90;" for="due-time">Due Time:</label>
+      <input type="time" id="due-time" name="due-time" required>
+
+      <input style="background-color: #07ad90;" type="submit" value="Add Reminder">
+    </form>
+
+    <div id="reminder-container"></div>
+  </div>
+
+  <div class="reminder-list">
+    <h2 style="color: #07ad90;">Reminders</h2>
+    <div id="existing-reminders"></div>
+    <div class="reminder-item"><p><strong>bank announcement</strong> 11/2/2024 at 11:30</p></div>
+  </div>
+
+  <script>
+    function addReminder(event) {
+      event.preventDefault();
+
+      const billName = document.getElementById("bill-name").value;
+      const dueDate = document.getElementById("due-date").value;
+      const dueTime = document.getElementById("due-time").value;
+
+      const reminderContainer = document.getElementById("reminder-container");
+      reminderContainer.innerHTML = `<div class="reminder-item"><p><strong>${billName} Bill:</strong> Due on ${dueDate} at ${dueTime}</p></div>`;
+
+      const existingReminders = document.getElementById("existing-reminders");
+      existingReminders.innerHTML += `<div class="reminder-item"><p><strong>${billName} Bill:</strong> Due on ${dueDate} at ${dueTime}</p></div>`;
+
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!-- login.ejs -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Credit Card Applications</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+   
+   <style> @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+header{
+    background: #07ad90;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+.logo{
+    text-decoration: none;
+    color:#fff ;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 500;
+    padding-left: 30px;
+    transition: 1.5s ease;
+}
+.navigation a:hover{
+    font-size: 2.2em;
+}
+.navigation a:hover{
+    color: #fff;
+}
+section{
+    padding: 100px 200px;
+}
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    /* alighn items can't be done before display flex */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+ 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.main h2{
+    color: white;
+    font-size: 1.4em;
+    font-weight: 500;
+
+
+}
+.main h2 span{
+    display: inline-block;
+    margin-top: 10px;
+    color: #07ad90;
+    font-size: 3em;
+    font-weight: 600;
+}
+.main h3{
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.main-btn{
+    text-decoration: none;
+    color: #fff;
+    background: #07ad90;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+
+} 
+.main-btn:hover{
+    background-color: #07ad90;
+    transform: scale(1.1);
+}
+.social-icons a{
+    color: white;
+    font-size: 1.7em;
+    padding-right: 30px;
+    transition: 0.7s ease;
+}
+.social-icons a:hover{
+    font-size: 2.2em;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    color: #07ad90;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card{
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1,1,1,.15); 
+   border-radius: 10px;
+   padding: 25px;
+   margin: 15px;
+   transition: .7s ease;
+}
+
+.card:hover{
+    transform: scale(1.1);
+
+}
+.icon{
+    color: #07ad90;
+    font-size: 8em;
+    text-align: center;
+}
+.info{
+    text-align: center;
+}
+.info h3{
+    color: #07ad90;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+    
+}
+.projects{
+    background-color: #000016;
+}
+.projects  .content{
+    margin-top: 30px;
+}
+.project-card{
+    background: white;
+    border: 1px solid white;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: .7s ease;
+}
+.project-card:hover{
+    transform: scale(1.1);
+}
+.project-img img{
+    width: 100%;
+
+
+}
+.project-card:hover .project-img{
+    opacity: .9;
+}
+.project-info{
+    padding: 1em;
+}
+.project-category{
+    font-size: 0.8em;
+    color: black;
+}
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+.more-details{
+    text-decoration: none;
+    color: #07ad90;
+}
+.more-details:hover{
+    color: #07ad90;
+}
+.contact .icon {
+    font-size: 4.5em;
+}
+.contact .info h3{
+    color: black;
+
+}
+.contact .info p{
+    font-size: 1.2em;
+}
+.footer{
+    background-color: #07ad90;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-title{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.footer-title span{
+    color: #07ad90;
+}
+.footer .social-icons a{
+    
+    padding: 0 12px 0 0;
+
+}
+@media (max-width:1023px){
+    header{
+        padding: 10px 10px;
+    }
+   .navigation a{
+       padding-left: 5px;
+       font-size: 1.4em;
+       font-weight: 400;
+       
+
+   }
+.title{
+    font-size: 1.8em;
+}
+section{
+    padding: 80px 20px;
+}
+.main-content h2{
+    font-size: 1em;
+}
+.main-content h3{
+    font-size: 1.6em;
+
+}
+.content{
+    flex-direction: column;
+    align-items: center;
+}
+@media (max-width:641px)
+{
+    body{
+        font-size: 12px;
+    }
+    .main-content h2{
+        font-size: .8em;
+        
+    }
+    .main-content h3{
+        font-size: 1.4em;
+    }
+}
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+    }
+}
+
+} </style>
+  </head>
+
+  <body>
+    <header>
+      <a href="/BankerPage" class="logo">DEEPEND </a>
+      <nav class="navigation">
+        <a href="#services">Credit Card Application</a>
+       
+          <i
+            style="width: 50px; height: 50px; color: #000016"
+            class="fa-solid fa-right-from-bracket"
+          ></i>
+        </a>
+      </nav>
+    </header>
+  <section class="main">
+    <div class="container"  >
+    <h1 style="color: #07ad90;">Credit Card Application</h1>
+    <form style="justify-content: center; display: flex; flex-direction: column;"> 
+        <div style="display: flex; flex-direction: column; ">
+  <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="text" id="dob" name="dob" placeholder="YYYY-MM-DD" required>
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required>
+
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" required>
+
+      <label for="state">State:</label>
+      <input type="text" id="state" name="state" required>
+
+      <label for="zip">ZIP Code:</label>
+      <input type="text" id="zip" name="zip" required>
+        </div>
+    
+
+<div >
+<div style="margin-bottom: 10px;">
+  <input type="radio" id="type1" name="cardType" checked>
+  <label for="type1">Visa Infinite</label><br>
+</div>
+
+  <div style="margin-bottom: 10px;">
+      <input type="radio" id="type2" name="cardType">
+  <label for="type2">Visa Platinum</label><br>
+  </div>
+
+  <div style="margin-bottom: 10px;">
+      <input type="radio" id="type3" name="cardType">
+  <label for="type3">Mastercard Standard</label><br>
+  </div>
+
+  <div style="margin-bottom: 10px;">
+      <input type="radio" id="type4" name="cardType">
+  <label for="type4">Mastercard Platinum</label><br>
+  </div>
+
+  <div style="margin-bottom: 10px;">
+      <input type="radio" id="type5" name="cardType">
+  <label for="type5">Mastercard Gold</label><br>
+  </div>
+
+  <div  style="margin-bottom: 10px;">
+      <input type="radio" id="type6" name="cardType">
+  <label for="type6">Mastercard World Elite</label><br>
+  </div>
+
+</div>
+
+
+
+
+      <button type="submit" style="background-color: #07ad90; color: #fff; margin-left: 25%; margin-right: 25%; height: 60px; border-radius: 8px; border: none;" >Submit</button>
+    </form>
+  </div>
+    
+
+
+
+    </section>
+    <footer class="footer">
+      <p class="footer-title">copyrights &copy; <span style="color: #fff;"> online bank </span></p>
+    </footer>
+  </body>
+</html>

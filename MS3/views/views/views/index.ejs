@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahmed Farahat</title>
+    <link rel="stylesheet" href="./style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/6fdaf88a4a.js" crossorigin="anonymous"></script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+header{
+    background: #f0f0f0;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+.logo{
+    text-decoration: none;
+    color:#3a6cf4 ;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: #3a6cf4;
+    font-size: 1.8em;
+    font-weight: 500;
+    padding-left: 30px;
+    transition: 1.5s ease;
+}
+.navigation a:hover{
+    font-size: 2.2em;
+}
+.navigation a:hover{
+    color: #601cfc;
+}
+section{
+    padding: 100px 200px;
+}
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    /* alighn items can't be done before display flex */
+    align-items: center;
+    background: url("white.jpeg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.main h2{
+    color: white;
+    font-size: 1.4em;
+    font-weight: 500;
+
+
+}
+.main h2 span{
+    display: inline-block;
+    margin-top: 10px;
+    color: #5c82eb;
+    font-size: 3em;
+    font-weight: 600;
+}
+.main h3{
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.main-btn{
+    text-decoration: none;
+    color: #fff;
+    background: #3a6cf4;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+
+} 
+.main-btn:hover{
+    background-color: #0a49f6;
+    transform: scale(1.1);
+}
+.social-icons a{
+    color: white;
+    font-size: 1.7em;
+    padding-right: 30px;
+    transition: 0.7s ease;
+}
+.social-icons a:hover{
+    font-size: 2.2em;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    color: #3a6cf4;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card{
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1,1,1,.15); 
+   border-radius: 10px;
+   padding: 25px;
+   margin: 15px;
+   transition: .7s ease;
+}
+.card:hover{
+    transform: scale(1.1);
+
+}
+.icon{
+    color: #3a6cf4;
+    font-size: 8em;
+    text-align: center;
+}
+.info{
+    text-align: center;
+}
+.info h3{
+    color: #3a6cf4;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+    
+}
+.projects{
+    background-color: #000016;
+}
+.projects  .content{
+    margin-top: 30px;
+}
+.project-card{
+    background: white;
+    border: 1px solid white;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: .7s ease;
+}
+.project-card:hover{
+    transform: scale(1.1);
+}
+.project-img img{
+    width: 100%;
+
+
+}
+.project-card:hover .project-img{
+    opacity: .9;
+}
+.project-info{
+    padding: 1em;
+}
+.project-category{
+    font-size: 0.8em;
+    color: black;
+}
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+.more-details{
+    text-decoration: none;
+    color: #3a6cf4;
+}
+.more-details:hover{
+    color: #601cfc;
+}
+.contact .icon {
+    font-size: 4.5em;
+}
+.contact .info h3{
+    color: black;
+
+}
+.contact .info p{
+    font-size: 1.2em;
+}
+.footer{
+    background-color: #000016;
+    color: white;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-title{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.footer-title span{
+    color: #3a6cf4;
+}
+.footer .social-icons a{
+    
+    padding: 0 12px 0 0;
+
+}
+@media (max-width:1023px){
+    header{
+        padding: 10px 10px;
+    }
+   .navigation a{
+       padding-left: 5px;
+       font-size: 1.4em;
+       font-weight: 400;
+       
+
+   }
+.title{
+    font-size: 1.8em;
+}
+section{
+    padding: 80px 20px;
+}
+.main-content h2{
+    font-size: 1em;
+}
+.main-content h3{
+    font-size: 1.6em;
+
+}
+.content{
+    flex-direction: column;
+    align-items: center;
+}
+@media (max-width:641px)
+{
+    body{
+        font-size: 12px;
+    }
+    .main-content h2{
+        font-size: .8em;
+        
+    }
+    .main-content h3{
+        font-size: 1.4em;
+    }
+}
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+    }
+}
+
+}
+  </style>
+  </head>
+  <body>
+    <header>
+      <a href="/home" class="logo">online bank </a>
+      <nav class="navigation">
+        <a href="#services">Home</a>
+        <a href="#projects">Accounts</a>
+        <a href="#contact">Credit Cards</a>
+        <a href="#contact">loans</a>
+        <a href="#contact">Reminders</a>
+        <a href="#contact">Transactions</a>
+        <a href="#contact">Help</a>
+      </nav>
+    </header>
+
+    <section class="main">
+      <div>
+        <h2>
+          banking account  <br />
+          <span>banking</span>
+        </h2>
+        <h3>A Portofolio</h3>
+        <a href="#projects" class="main-btn">view my work</a>
+        <div class="social-icons">
+          <a href="https://web.facebook.com/profile.php?id=100090827391219"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://twitter.com/ahmedmo45459923"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://www.instagram.com/afarahat991/"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://github.com/ahmed-farahat-pro"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+    <section class="cards" id="services">
+      <h2 class="title">Skills</h2>
+      <div class="content">
+        <div class="card">
+          <div class="info">
+            <h3>CSS && Html</h3>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="info">
+            <h3>Java</h3>
+            <p></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="info">
+            <h3>react</h3>
+            <p></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="info">
+            <h3>react-native</h3>
+            <p></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="info">
+            <h3>Figma</h3>
+            <p></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="info">
+            <h3>javaScript</h3>
+            <p></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="info">
+            <h3>MongoDB</h3>
+            <p></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="info">
+            <h3>swift</h3>
+            <p></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="info">
+            <h3>node js</h3>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="projects" id="projects">
+      <h2 class="title">Projects</h2>
+      <div class="content">
+        <div class="project-card">
+          <div class="project-img">
+            <img
+              src="https://th.bing.com/th/id/R.34304f74f8d8d715cf2b45835a9d804f?rik=GP%2by8COq9b3A0Q&pid=ImgRaw&r=0"
+              alt=""
+            />
+          </div>
+          <div class="project-info">
+            <p class="project-category">
+              tell your daily events to this app (ios - android)
+            </p>
+            <strong class="project-title">
+              <span> diary-ios-android </span>
+              <a
+                href="https://github.com/ahmed-farahat-pro/Diary-app-ios-andriod"
+                class="more-details"
+                >source code</a
+              >
+            </strong>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img">
+            <img
+              src="https://th.bing.com/th/id/R.34304f74f8d8d715cf2b45835a9d804f?rik=GP%2by8COq9b3A0Q&pid=ImgRaw&r=0"
+              alt=""
+            />
+          </div>
+          <div class="project-info">
+            <p class="project-category">
+              tell your daily events to this app (web version)
+            </p>
+            <strong class="project-title">
+              <span> diary-Web </span>
+              <a
+                href="https://github.com/ahmed-farahat-pro/Diary-app-web"
+                class="more-details"
+                >source code</a
+              >
+            </strong>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img">
+            <img
+              src="https://th.bing.com/th/id/OIP.2CQqheeZeUjo81Mjvo4LgAAAAA?pid=ImgDet&w=325&h=263&rs=1"
+              alt=""
+            />
+          </div>
+          <div class="project-info">
+            <p class="project-category">
+              app to save data about football(clubs , fans , managers , matches
+              , tickets , .......)
+            </p>
+            <strong class="project-title">
+              <span> database-app </span>
+              <a
+                href="https://github.com/ahmed-farahat-pro/database-react-native"
+                class="more-details"
+                >react-native</a
+              >
+              <a
+                href="https://github.com/ahmed-farahat-pro/database-API-SQL"
+                class="more-details"
+                >API</a
+              >
+              <a
+                href="https://github.com/ahmed-farahat-pro/database-SQL"
+                class="more-details"
+                >SQL</a
+              >
+            </strong>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img">
+            <img
+              src="https://th.bing.com/th/id/R.a80087b57ee433da5bbb6fbc68023edb?rik=sWBSJHUG5Jo9MQ&pid=ImgRaw&r=0"
+              alt=""
+            />
+          </div>
+          <div class="project-info">
+            <p class="project-category">
+              low-design marvel game using java and acessing csv files
+            </p>
+            <strong class="project-title">
+              <span> game with java </span>
+              <a
+                href="https://github.com/ahmed-farahat-pro/Mavel-game-low-design"
+                class="more-details"
+                >source code</a
+              >
+            </strong>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cards contact" id="contact">
+      <h2 class="title">Let's work together</h2>
+      <div class="content">
+        <div class="card">
+          <div class="icon"><i class="fas fa-envelope-open-text"></i></div>
+          <div class="info">
+            <h3>Email</h3>
+            <p>ahmedfarahat430@gmail.com</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="icon"><i class="fas fa-phone"></i></div>
+          <div class="info">
+            <h3>phone</h3>
+            <p>+201115333103</p>
+            <br />
+            <p>+4917669367096</p>
+          </div>
+        </div>
+      </div>
+    </section>
+   <footer class="footer">
+      <p class="footer-title">copyrights &copy; <span> DEEP END </span></p>
+    
+    </footer>
+  </body>
+</html>

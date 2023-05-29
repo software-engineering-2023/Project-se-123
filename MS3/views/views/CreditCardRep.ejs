@@ -1,0 +1,172 @@
+<!-- login.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <head>
+    <title>My Page with Banner</title>
+    <style>
+      /* CSS for the banner */
+      .banner {
+        background-color: #07ad90;
+        color: #fff;
+        padding: 12px;
+        text-align: left;
+      }
+      
+      .banner p {
+        margin: 0;
+        font-size: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <p>FMI BANKING SYSTEM</p>
+    </div>
+  <title>Banker Dashboard</title>
+  <script>
+    function acceptRequest(button) {
+  var requestCard = button.closest('.request-card');
+  requestCard.classList.add('accepted');
+  requestCard.querySelector('.status-message').textContent = 'accepted';
+}
+
+function rejectRequest(button) {
+  var requestCard = button.closest('.request-card');
+  requestCard.classList.add('rejected');
+  requestCard.querySelector('.status-message').textContent = 'rejected';
+}
+function resolveissue(button) {
+  var requestCard = button.closest('.resolved');
+  requestCard.classList.add('resolved');
+  requestCard.querySelector('.status-message').textContent = 'resolved';
+}
+
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .request-card {
+      background-color: #f5f5f5;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .request-card h3 {
+      margin-top: 0;
+    }
+
+    .request-card p {
+      margin-bottom: 10px;
+    }
+
+    .request-card .status-message {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .request-card.accepted .status-message {
+      color: #07ad90;
+    }
+    .request-card.resolved .status-message {
+      color: #07ad90;
+    }
+
+    .request-card.resolved .status-message {
+      color: #07ad90;
+    }
+
+    .request-card.rejected .status-message {
+      color: rgb(65, 62, 62);
+    }
+
+    .request-card.rejected .status-message {
+      color: #07ad90;
+    }
+    .request-card .btn-container {
+      display: flex;
+      justify-content: center;
+    }
+   
+    .request-card .btn-container button {
+      background-color: #07ad90;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .request-card .btn-container button:last-child {
+      background-color:rgb(65, 62, 62);
+    }
+    .request-card.resolved .status-message {
+      color: #07ad90;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Banker Dashboard</h1>
+
+  <div class="request-card">
+    <h3>Credit Card Loss Report</h3>
+    <p><strong>Reason:</strong> My Credit Card is Stolen</p>
+    <p><strong>Credit Card Number:</strong> 1677 3927 2638 3456</p>
+    <p><strong>Apply for a new card:</strong> yes</p>
+
+    <div class="btn-container">
+      <button onclick="acceptRequest(this)">Accept</button>
+      <button onclick="rejectRequest(this)">Reject</button>
+      <button onclick="rejectRequest(this)">resolved</button>
+    </div>
+
+    <p class="status-message"></p>
+  </div>
+
+   <div class="request-card">
+    <h3>Credit Card Loss Report</h3>
+    <p><strong>Reason:</strong> My Credit Card is damaged</p>
+    <p><strong>Credit Card Number:</strong> 3644 7802 5671 1222</p>
+    <p><strong>Apply for a new card:</strong> Yes</p>
+
+    <div class="btn-container">
+      <button onclick="acceptRequest(this)">Accept</button>
+      <button onclick="rejectRequest(this)">Reject</button>
+      <button onclick="rejectRequest(this)">resolved</button>
+    </div>
+
+    <p class="status-message"></p>
+  </div>
+
+   <div class="request-card">
+    <h3>Credit Card Loss Report</h3>
+    <p><strong>Reason:</strong> My Credit Card is Stolen</p>
+    <p><strong>Credit Card Number:</strong> 1234 5678 9012 3456</p>
+    <p><strong>Apply for a new card:</strong> Yes</p>
+
+    <div class="btn-container">
+      <button onclick="acceptRequest(this)">Accept</button>
+      <button onclick="rejectRequest(this)">Reject</button>
+      <button onclick="rejectRequest(this)">resolved</button>
+    </div>
+
+    <p class="status-message"></p>
+  </div>
+
+  <!-- More request cards can be added here -->
+
+  <script src="app.js"></script>
+</body>
+</html>

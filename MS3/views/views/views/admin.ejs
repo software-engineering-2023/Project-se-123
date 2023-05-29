@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Page</title>
+  <style>
+    .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000016;
+  color: white;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      margin-bottom: 40px; 
+      color: white;
+
+         }
+        
+
+    
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 100px;
+      
+      
+    }
+    
+    th{
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid grey;
+      border-top: 2px solid grey;
+      border-right: 2px solid grey;
+      border-left: 2px solid grey;
+      color: white;
+    }
+     td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid grey;
+      border-top: 2px solid grey;
+      border-right: 2px solid grey;
+      border-left: 2px solid grey;
+
+    }
+    
+    th {
+      background-color: #07ad91;
+    }
+    
+    .solved {
+      color: green;
+      font-weight: bold;
+    }
+    
+    .not-solved {
+      color: red;
+      font-weight: bold;
+    }
+    
+    .button {
+      background-color: rgba(128, 128, 128, 0.61);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      margin: 5px 2px;
+      cursor: pointer;
+    }
+    
+    .button:hover {
+      background-color: #45a049;
+    }
+    header {
+  background: #07ad90;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 200px;
+  height: 50px; 
+
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.8em;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 500;
+  padding-left: 30px;
+  transition: 1.5s ease;
+}
+
+.navigation a:hover {
+  font-size: 2.2em;
+}
+
+.navigation a:hover {
+  color: #fff;
+}
+
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var buttons = document.getElementsByClassName("button");
+      
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function() {
+          var statusCell = this.parentNode.previousElementSibling;
+          statusCell.innerHTML = "Solved";
+          statusCell.classList.remove("not-solved");
+          statusCell.classList.add("solved");
+          this.style.display = "none";
+        });
+      }
+    });
+  </script>
+</head>
+<header>
+  <a href="/home" class="logo" image="logo.jpg">FMI Bank</a>
+  <nav class="navigation">
+    <a href="/notifications">
+      <i style="width: 50px; height: 50px; color: #000016;" class="fa-regular fa-bell"></i>
+    </a>
+    <a href="/login">
+      <i style="width: 50px; height: 50px; color: #000016;" class="fa-solid fa-right-from-bracket"></i>
+    </a>
+  </nav>
+  <span class="header-text">Welcome, John Doe</span>
+</header>
+
+
+<body>
+
+  <table>
+    <tr>
+      <th>Issue ID</th>
+      <th>Reported By</th>
+      <th>Issue Description</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>User123</td>
+      <td>Unable to login</td>
+      <td class="not-solved">Not Solved</td>
+      <td><button class="button">Mark as Solved</button></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>User456</td>
+      <td>Error while making a transfer</td>
+      <td class="solved">Solved</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>User789</td>
+      <td>Balance not updating</td>
+      <td class="not-solved">Not Solved</td>
+      <td><button class="button">Mark as Solved</button></td>
+    </tr>
+    <!-- Add more rows for other issues -->
+  </table>
+  <footer class="footer">
+    <p class="footer-title">All Rights Reserved, 2023 &copy; <span>FMI </span></p>
+  
+  </footer>
+</body>
+</html>
